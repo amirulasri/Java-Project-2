@@ -22,7 +22,7 @@ public class Main {
         Scanner userinput = new Scanner(System.in);
         DecimalFormat priceformatter = new DecimalFormat();
         
-        Tailor T[][] = new Tailor[2][2];
+        Tailor T[][] = new Tailor[20][2];
         System.out.println("Welcome!");
         for (int i = 0; i < T[0].length; i++) {
             System.out.println("++++++++ Enter details for customer "+ (i+1) +" ++++++++");
