@@ -10,7 +10,8 @@ public class Wedding extends Event{
     
     public Wedding (String custName, int numOfGuest, int menuType, boolean pelamin, String style){
         super(custName, numOfGuest, menuType);
-        
+        this.pelamin = pelamin;
+        this.style = style;
     }
     
     public boolean getPelamin(){
