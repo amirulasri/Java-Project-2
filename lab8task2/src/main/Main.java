@@ -24,20 +24,20 @@ public class Main {
         int eventselector;
 
         Scanner userinput = new Scanner(System.in);
-        DecimalFormat priceformatter = new DecimalFormat();
+        DecimalFormat priceformatter = new DecimalFormat("#0.00");
 
-        Event[] event = new Event[6];
+        Event[] event = new Event[2];
         System.out.println("Welcome!");
         for (int i = 0; i < event.length; i++) {
-            System.out.print("Choose Event:- \n1. Wedding \n2. Birthday \nSelect by number: ");
-            eventselector = userinput.nextInt();
-            if (eventselector == 1) {
-                System.out.println("=Wedding selected=");
-            } else {
-                System.out.println("=Birthday selected=");
-            }
-
             System.out.println("++++++++ Enter details for customer " + (i + 1) + " ++++++++");
+            System.out.print("Choose Event (Customer "+(i+1)+"):- \n1. Wedding \n2. Birthday \nSelect by number: ");
+            eventselector = userinput.nextInt();
+            userinput.nextLine();
+            if (eventselector == 1) {
+                System.out.println("=Wedding selected=\n");
+            } else {
+                System.out.println("=Birthday selected=\n");
+            }
             System.out.print("Name: ");
             custName = userinput.nextLine();
             System.out.print("Number of guest: ");
@@ -84,12 +84,29 @@ public class Main {
 
                 event[i] = new Birthday(custName, numOfGuest, menuType, theme, clown);
             }
+            System.out.println();
         }
         
-        //DISPLAY ALL OBJECT
+        //DISPLAY ALL OBJECTS
+        System.out.println("\n\n\nAll data displayed here!");
+        
+        System.out.println("\n==Wedding Data==");
         for (int i = 0; i < event.length; i++) {
             if(event[i] instanceof Wedding){
-                event[i].toString();
+                System.out.println("--Customer " + (i + 1) + "--");
+                System.out.println(event[i].toString());
+                System.out.println("Total Price: RM" + priceformatter.format(event[i].calPayment()));
+                System.out.println();
+            }
+        }
+        
+        System.out.println("\n==Birthday Data==");
+        for (int i = 0; i < event.length; i++) {
+            if(event[i] instanceof Birthday){
+                System.out.println("--Customer " + (i + 1) + "--");
+                System.out.println(event[i].toString());
+                System.out.println("Total Price: RM" + priceformatter.format(event[i].calPayment()));
+                System.out.println();
             }
         }
     }
