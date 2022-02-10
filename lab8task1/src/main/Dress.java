@@ -54,7 +54,7 @@ public class Dress extends Tailor{
         double charges;
         charges = kebaya + kurung + jubah;
         
-        if(custType == 'y' || custType == 'Y'){
+        if(custType == '1'){
             charges = charges + (charges * 0.15);
         }
         
@@ -64,7 +64,7 @@ public class Dress extends Tailor{
     @Override
     public String toString(){
         String custTypename;
-        if(super.custType == 1){
+        if(super.custType == '1'){
             custTypename = "Regular customer";
         }else{
             custTypename = "New customer";

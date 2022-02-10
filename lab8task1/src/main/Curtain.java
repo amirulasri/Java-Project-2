@@ -34,7 +34,7 @@ public class Curtain extends Tailor{
     @Override
     double calCharges() {
         double charge = (getWindows()* WINDOW_PRICE)+(getDoors()* DOOR_PRICE);
-        if(custType == 'y' || custType == 'Y'){
+        if(custType == '1'){
             charge = charge + (charge * 0.15);
         }
         return charge;

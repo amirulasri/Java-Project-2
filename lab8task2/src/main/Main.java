@@ -26,8 +26,8 @@ public class Main {
         Scanner userinput = new Scanner(System.in);
         DecimalFormat priceformatter = new DecimalFormat("#0.00");
 
-        Event[] event = new Event[2];
-        System.out.println("Welcome!");
+        Event[] event = new Event[6];
+        System.out.println("---Welcome!---");
         for (int i = 0; i < event.length; i++) {
             System.out.println("++++++++ Enter details for customer " + (i + 1) + " ++++++++");
             System.out.print("Choose Event (Customer "+(i+1)+"):- \n1. Wedding \n2. Birthday \nSelect by number: ");
@@ -42,11 +42,11 @@ public class Main {
             custName = userinput.nextLine();
             System.out.print("Number of guest: ");
             numOfGuest = userinput.nextInt();
-            System.out.print("Menu type (1 - 3): ");
+            System.out.print("Menu type (1 - RM10, 2 - RM20, 3 - RM30): ");
             menuType = userinput.nextInt();
 
             if (eventselector == 1) {
-                System.out.print("Choose Wedding Style:- \n1. Garden \n2. Modern \n3. Traditional \nSelect by number: ");
+                System.out.print("Choose Wedding Style:- \n1. Garden (RM 3000) \n2. Modern (RM 3500) \n3. Traditional (RM 2000) \nSelect by number: ");
                 stylechooser = userinput.nextInt();
                 if (stylechooser == 1) {
                     style = "Garden";
@@ -55,7 +55,7 @@ public class Main {
                 } else if (stylechooser == 3) {
                     style = "Traditional";
                 }
-                System.out.print("Included pelamin? (Yes/No): ");
+                System.out.print("Included pelamin? - RM 1500 (Yes/No): ");
                 pelaminchooser = userinput.next();
                 if (pelaminchooser.equalsIgnoreCase("Yes") || pelaminchooser.equalsIgnoreCase("y")) {
                     pelamin = true;
@@ -65,7 +65,7 @@ public class Main {
 
                 event[i] = new Wedding(custName, numOfGuest, menuType, pelamin, style);
             } else {
-                System.out.print("Choose Birthday Theme:- \n1. Anime \n2. Superhero \n3. Barbie \nSelect by number: ");
+                System.out.print("Choose Birthday Theme:- \n1. Anime (RM 400) \n2. Superhero (RM 300) \n3. Barbie (RM 450) \nSelect by number: ");
                 themechooser = userinput.nextInt();
                 if (themechooser == 1) {
                     theme = "Anime";
@@ -74,7 +74,7 @@ public class Main {
                 } else if (themechooser == 3) {
                     theme = "Barbie";
                 }
-                System.out.print("Included clown service? (Yes/No): ");
+                System.out.print("Included clown service? RM 200 (Yes/No): ");
                 clownchooser = userinput.next();
                 if (clownchooser.equalsIgnoreCase("Yes") || clownchooser.equalsIgnoreCase("y")) {
                     clown = true;
