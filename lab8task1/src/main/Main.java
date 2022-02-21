@@ -26,7 +26,7 @@ public class Main {
         DecimalFormat priceformatter = new DecimalFormat("#0.00");
 
         Tailor T[] = new Tailor[20];
-        System.out.println("---Welcome!---");
+        System.out.println("---Welcome! Enter all details needed---");
         for (int i = 0; i < T.length; i++) {
 
             System.out.println("++++++++ Enter details for customer " + (i + 1) + " ++++++++");

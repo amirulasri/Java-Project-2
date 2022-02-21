@@ -27,7 +27,7 @@ public class Main {
         DecimalFormat priceformatter = new DecimalFormat("#0.00");
 
         Event[] event = new Event[6];
-        System.out.println("---Welcome!---");
+        System.out.println("---Welcome! Enter all details needed---");
         for (int i = 0; i < event.length; i++) {
             System.out.println("++++++++ Enter details for customer " + (i + 1) + " ++++++++");
             System.out.print("Choose Event (Customer "+(i+1)+"):- \n1. Wedding \n2. Birthday \nSelect by number: ");
