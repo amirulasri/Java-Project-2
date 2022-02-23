@@ -11,13 +11,13 @@ import javax.swing.JOptionPane;
  *
  * @author amiru
  */
-public class Main extends javax.swing.JFrame {
+public class Lab10q1 extends javax.swing.JFrame {
     DecimalFormat priceformatter = new DecimalFormat("#0.00");
 
     /**
      * Creates new form Main
      */
-    public Main() {
+    public Lab10q1() {
         initComponents();
         setLocationRelativeTo(null);
         setVisible(true);
@@ -102,7 +102,7 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new Lab10q1().setVisible(true);
             }
         });
     }
