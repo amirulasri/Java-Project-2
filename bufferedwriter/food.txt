@@ -1,0 +1,4 @@
+Fruits RM10.00
+Vegetables RM20.00
+Food RM30.00
+Teh Ais RM 80.0

@@ -20,7 +20,6 @@ public class Lab10q1 extends javax.swing.JFrame {
     public Lab10q1() {
         initComponents();
         setLocationRelativeTo(null);
-        setVisible(true);
     }
 
     /**
