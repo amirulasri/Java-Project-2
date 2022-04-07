@@ -70,6 +70,7 @@ public class Carrental {
             }
             pw.close();
             pw2.close();
+            br.close();
         } catch (EOFException ex) {
             System.out.println("End of file error");
         } catch (FileNotFoundException ex) {
