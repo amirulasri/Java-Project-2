@@ -4,7 +4,7 @@ public class HelloPet implements Pet{
 
     @Override
     public void Play() {
-        System.out.println("How to play ("+name+"): \n1.");
+        System.out.println("How to play ("+name+"): \n1. Playing with cat by feeding,take your pet out for a walk,by clicking on buttons");
     }
     
 }
