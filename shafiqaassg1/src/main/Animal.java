@@ -7,7 +7,7 @@ abstract class Animal {
     }
     
     public void Walk () {
-        System.out.println("Number of legs: " + legs);
+        System.out.println("The animal have: "+ legs +".This animals walks like Hopping is the movement for rabbits due to their powerful hind legs);
     }
     
     public abstract void Eat ();
